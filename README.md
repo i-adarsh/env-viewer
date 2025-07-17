@@ -34,3 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```bash
+gcloud run deploy next-vars   --source .   --platform managed   --region asia-east1   --allow-unauthenticated   --set-env-vars NEXT_PUBLIC_TEST_VAR=hello-from-env   --set-env-vars NEXT_PUBLIC_API_URL=https://api.example.com   --set-env-vars "NEXT_PUBLIC_APP_NAME=Test Cloud Run App"   --set-env-vars NEXT_PUBLIC_VERSION=1.0.0   --set-env-vars NEXT_PUBLIC_ENVIRONMENT=development   --set-env-vars NEXT_PUBLIC_FEATURE_FLAG_NEW_UI=true   --set-env-vars NEXT_PUBLIC_MAX_RETRIES=3   --set-env-vars NEXT_PUBLIC_TIMEOUT=5000   --set-env-vars NEXT_PUBLIC_DEBUG_MODE=false   --set-env-vars NEXT_PUBLIC_LOG_LEVEL=info   --set-env-vars PUBLIC_API_URL=testing
+```
